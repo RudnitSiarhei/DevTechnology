@@ -9,24 +9,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </head>
   <body>
-    <main class="main">
-      <div class="container border col-md-5 p-3 mt-3" style="background-color: #EEEEEE;">
-        <form action="#" method="post" role="form" class="form-horizontal p-3" enctype="multipart/form-data">
-            <h2 class="text-center mb-4">Admin Authorization</h2>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Login</label>
-              <input type="email" class="form-control" id="inputLogin">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="inputPassword1">
-            </div>
-            <button type="button" class="btn btn-primary" name="addNewPerson" value="#" style="background: #7749F8; color: #ffffff">Sumbit</button>
-        </form>
-      </div>
+    <main class="container border col-10 col-sm-6 col-md-8 col-lg-6 col-xl-4 p-3 center-block" style="background-color: #EEEEEE; margin-top: 10%;">
+      <form action="#" method="post" role="form" class="form-horizontal p-3 "  enctype="multipart/form-data" >
+          <h2 class="text-center mb-4">Admin Authorization</h2>
+          <div class="form-group">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" id="login">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <button type="button" class="btn btn-primary" name="addNewPerson" value="#" style="background: #7749F8; color: #ffffff">Sumbit</button>
+      </form>
     </main>
-    <footer class="text-center" >
-      <h4>php study, 2022</h4>
+    <footer class="fixed-bottom" >
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">PHP Study, 2023</div>
     </footer>
   </body>
 </html>
