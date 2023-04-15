@@ -97,93 +97,81 @@
                 </div>
             </div>
             <div class="small__team">
+            <?php    
+                $teams = 
+                [
+                    1 => [
+                            'name' => 'Jessica Alba',
+                            'position' => 'CEO',
+                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
+                            'linkFacebook' => 'https://www.facebook.com',
+                            'linkTwitter' => 'https://twitter.com',
+                            'linkDribbble' => 'https://dribbble.com',
+                            'linkMail' => 'https://mail.google.com',
+                            'img' => '/img/62aa322b8d40f.png'
+                    ],
+                    2 => [ 
+                            'name' => 'Al Rayhan',
+                            'position' => 'Ul Designer',
+                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
+                            'linkFacebook' => 'https://www.facebook.com',
+                            'linkTwitter' => 'https://twitter.com',
+                            'linkDribbble' => 'https://dribbble.com',
+                            'linkMail' => 'https://mail.google.com',
+                            'img' => '/img/620d295374f7b.png'
+                    ],
+                    3 => [
+                            'name' => 'Jamal Hammer',
+                            'position' => 'Junior',
+                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
+                            'linkFacebook' => 'https://www.facebook.com',
+                            'linkTwitter' => 'https://twitter.com',
+                            'linkDribbble' => 'https://dribbble.com',
+                            'linkMail' => 'https://mail.google.com',
+                            'img' => '/img/620d29845434e.png'      
+                    ],
+                    4 => [
+                            'name' => 'Arnold Smith',
+                            'position' => 'Middle QA',
+                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
+                            'linkFacebook' => 'https://www.facebook.com',
+                            'linkTwitter' => 'https://twitter.com',
+                            'linkDribbble' => 'https://dribbble.com',
+                            'linkMail' => 'https://mail.google.com',
+                            'img' => '/img/620d29c56d6f3.png'
+                    ],
+                    5 => [
+                            'name' => 'Nina Dobrev',
+                            'position' => 'Senior QA',
+                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
+                            'linkFacebook' => 'https://www.facebook.com',
+                            'linkTwitter' => 'https://twitter.com',
+                            'linkDribbble' => 'https://dribbble.com',
+                            'linkMail' => 'https://mail.google.com',
+                            'img' => '/img/620d29de47a8b.png'
+                    ],
+                    6 => [
+                            'name' => 'Emma Smith',
+                            'position' => 'Team Lead',
+                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
+                            'linkFacebook' => 'https://www.facebook.com',
+                            'linkTwitter' => 'https://twitter.com',
+                            'linkDribbble' => 'https://dribbble.com',
+                            'linkMail' => 'https://mail.google.com',
+                            'img' => '/img/620d29fe16d0a.png'
+                    ],
+                ];
+             ?>
                 <h2 class="title__text">small team</h2>
                 <h3 class="subtitle__text">lorem ipsum dolor sit amet event landing template</h3>
                 <div class="block-img">
                     <ul class="block-img-spisok">
-                        <li class="block-img-spisok-punkt">
-                            <div class="profil-info">
-                                <h2 class="name-peop"><?php echo $name = 'Jessica ';?><span class="porfesion-peopl">/ <?php echo $porfesion = 'UI Designer';?></span></h2>
-                                <h3 class="more-info-peopl"><?php echo $info = 'Lorem Ipsum is not simply is  an action designer random text It has roots in a piece.';?></h3>
-                                <div class="social-people">
-                                <a class="fa fa-facebook icon-soc-peop" href="https://www.facebook.com/"></a>
-                                <a class="fa fa-twitter icon-soc-peop" href="https://twitter.com/"></a>
-                                <a class="fa fa-dribbble icon-soc-peop" href="https://dribbble.com/"></a>
-                                <a class="fa fa-envelope icon-soc-peop" href="https://mail.google.com/"></a>
-                                </div>
-                            </div>
-                            <img class="small-team-img" src="/img/62aa322b8d40f.png" alt="team_1">
-                        </li>
-                        <li class="block-img-spisok-punkt">
-                            <li class="block-img-spisok-punkt">
-                                <div class="profil-info">
-                                    <h2 class="name-peop">al rayhan <span class="porfesion-peopl">/ UI Designer</span></h2>
-                                    <h3 class="more-info-peopl">Lorem Ipsum is not simply is  an action designer random text It has roots in a piece.</h3>
-                                <div class="social-people">
-                                <a class="fa fa-facebook icon-soc-peop" href="https://www.facebook.com/" aria-hidden="true"></a>
-                                <a class="fa fa-twitter icon-soc-peop" href="https://twitter.com/" aria-hidden="true"></a>
-                                <a class="fa fa-dribbble icon-soc-peop" href="https://dribbble.com/" aria-hidden="true"></a>
-                                <a class="fa fa-envelope icon-soc-peop" href="https://mail.google.com/" aria-hidden="true"></a>
-                                </div>
-                            </div>
-                            <img class="small-team-img" src="/img/620d295374f7b.png" alt="team_2">
-                        </li>
-                        <li class="block-img-spisok-punkt">
-                            <li class="block-img-spisok-punkt">
-                                <div class="profil-info">
-                                    <h2 class="name-peop">al rayhan <span class="porfesion-peopl">/ UI Designer</span></h2>
-                                    <h3 class="more-info-peopl">Lorem Ipsum is not simply is  an action designer random text It has roots in a piece.</h3>
-                                <div class="social-people">
-                                <a class="fa fa-facebook icon-soc-peop" href="https://www.facebook.com/" aria-hidden="true"></a>
-                                <a class="fa fa-twitter icon-soc-peop" href="https://twitter.com/" aria-hidden="true"></a>
-                                <a class="fa fa-dribbble icon-soc-peop" href="https://dribbble.com/" aria-hidden="true"></a>
-                                <a class="fa fa-envelope icon-soc-peop" href="https://mail.google.com/" aria-hidden="true"></a>
-                                </div>
-                            </div>
-                            <img class="small-team-img" src="/img/620d29845434e.png" alt="team_3">
-                        </li>
-                        <li class="block-img-spisok-punkt">
-                            <li class="block-img-spisok-punkt">
-                                <div class="profil-info">
-                                    <h2 class="name-peop">al rayhan <span class="porfesion-peopl">/ UI Designer</span></h2>
-                                    <h3 class="more-info-peopl">Lorem Ipsum is not simply is  an action designer random text It has roots in a piece.</h3>
-                                <div class="social-people">
-                                <a class="fa fa-facebook icon-soc-peop" href="https://www.facebook.com/" aria-hidden="true"></a>
-                                <a class="fa fa-twitter icon-soc-peop" href="https://twitter.com/" aria-hidden="true"></a>
-                                <a class="fa fa-dribbble icon-soc-peop" href="https://dribbble.com/" aria-hidden="true"></a>
-                                <a class="fa fa-envelope icon-soc-peop" href="https://mail.google.com/" aria-hidden="true"></a>
-                                </div>
-                            </div>
-                            <img class="small-team-img" src="/img/620d29c56d6f3.png" alt="team_4">
-                        </li>
-                        <li class="block-img-spisok-punkt">
-                            <li class="block-img-spisok-punkt">
-                                <div class="profil-info">
-                                    <h2 class="name-peop">al rayhan <span class="porfesion-peopl">/ UI Designer</span></h2>
-                                    <h3 class="more-info-peopl">Lorem Ipsum is not simply is  an action designer random text It has roots in a piece.</h3>
-                                <div class="social-people">
-                                <a class="fa fa-facebook icon-soc-peop" href="https://www.facebook.com/" aria-hidden="true"></a>
-                                <a class="fa fa-twitter icon-soc-peop" href="https://twitter.com/" aria-hidden="true"></a>
-                                <a class="fa fa-dribbble icon-soc-peop" href="https://dribbble.com/" aria-hidden="true"></a>
-                                <a class="fa fa-envelope icon-soc-peop" href="https://mail.google.com/" aria-hidden="true"></a>
-                                </div>
-                            </div>
-                            <img class="small-team-img" src="/img/620d29de47a8b.png" alt="team_5">
-                        </li>
-                        <li class="block-img-spisok-punkt">
-                            <li class="block-img-spisok-punkt">
-                                <div class="profil-info">
-                                    <h2 class="name-peop">al rayhan <span class="porfesion-peopl">/ UI Designer</span></h2>
-                                    <h3 class="more-info-peopl">Lorem Ipsum is not simply is  an action designer random text It has roots in a piece.</h3>
-                                <div class="social-people">
-                                <a class="fa fa-facebook icon-soc-peop" href="https://www.facebook.com/" aria-hidden="true"></a>
-                                <a class="fa fa-twitter icon-soc-peop" href="https://twitter.com/" aria-hidden="true"></a>
-                                <a class="fa fa-dribbble icon-soc-peop" href="https://dribbble.com/" aria-hidden="true"></a>
-                                <a class="fa fa-envelope icon-soc-peop" href="https://mail.google.com/" aria-hidden="true"></a>
-                                </div>
-                            </div>
-                            <img class="small-team-img" src="/img/620d29fe16d0a.png" alt="team_6">
-                        </li>
+                        <?php    
+                            foreach ($teams as $key => $team)
+                            {
+                                require "view/team.php";
+                            } 
+                        ?>
                     </ul>
                 </div>
             </div>
