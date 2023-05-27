@@ -25,7 +25,7 @@
                     <span class="back-color-texthead">agency</span> corporate dt theme
                 </h1>
                 <div >
-                    <button class="header__button" name="button">Admin</button>
+                    <button class="header__button" name="button" onclick="document.location='View/forms/authForm.php'">Admin</button>
                 </div>
                 <div class="header__img">
                     <img src="/img/header_glass.png" alt="header_glass">
@@ -97,80 +97,12 @@
                 </div>
             </div>
             <div class="small__team">
-            <?php    
-                $teams = 
-                [
-                    1 => [
-                            'name' => 'Jessica Alba',
-                            'position' => 'CEO',
-                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
-                            'linkFacebook' => 'https://www.facebook.com',
-                            'linkTwitter' => 'https://twitter.com',
-                            'linkDribbble' => 'https://dribbble.com',
-                            'linkMail' => 'https://mail.google.com',
-                            'img' => '/img/62aa322b8d40f.png'
-                    ],
-                    2 => [ 
-                            'name' => 'Al Rayhan',
-                            'position' => 'Ul Designer',
-                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
-                            'linkFacebook' => 'https://www.facebook.com',
-                            'linkTwitter' => 'https://twitter.com',
-                            'linkDribbble' => 'https://dribbble.com',
-                            'linkMail' => 'https://mail.google.com',
-                            'img' => '/img/620d295374f7b.png'
-                    ],
-                    3 => [
-                            'name' => 'Jamal Hammer',
-                            'position' => 'Junior',
-                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
-                            'linkFacebook' => 'https://www.facebook.com',
-                            'linkTwitter' => 'https://twitter.com',
-                            'linkDribbble' => 'https://dribbble.com',
-                            'linkMail' => 'https://mail.google.com',
-                            'img' => '/img/620d29845434e.png'      
-                    ],
-                    4 => [
-                            'name' => 'Arnold Smith',
-                            'position' => 'Middle QA',
-                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
-                            'linkFacebook' => 'https://www.facebook.com',
-                            'linkTwitter' => 'https://twitter.com',
-                            'linkDribbble' => 'https://dribbble.com',
-                            'linkMail' => 'https://mail.google.com',
-                            'img' => '/img/620d29c56d6f3.png'
-                    ],
-                    5 => [
-                            'name' => 'Nina Dobrev',
-                            'position' => 'Senior QA',
-                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
-                            'linkFacebook' => 'https://www.facebook.com',
-                            'linkTwitter' => 'https://twitter.com',
-                            'linkDribbble' => 'https://dribbble.com',
-                            'linkMail' => 'https://mail.google.com',
-                            'img' => '/img/620d29de47a8b.png'
-                    ],
-                    6 => [
-                            'name' => 'Emma Smith',
-                            'position' => 'Team Lead',
-                            'info' => 'Lorem Ipsum is not simply is an action designer random text. It has roots in a piece.',
-                            'linkFacebook' => 'https://www.facebook.com',
-                            'linkTwitter' => 'https://twitter.com',
-                            'linkDribbble' => 'https://dribbble.com',
-                            'linkMail' => 'https://mail.google.com',
-                            'img' => '/img/620d29fe16d0a.png'
-                    ],
-                ];
-             ?>
                 <h2 class="title__text">small team</h2>
                 <h3 class="subtitle__text">lorem ipsum dolor sit amet event landing template</h3>
                 <div class="block-img">
                     <ul class="block-img-spisok">
                         <?php    
-                            foreach ($teams as $key => $team)
-                            {
-                                require "view/team.php";
-                            } 
+                            require_once('view/team.php');
                         ?>
                     </ul>
                 </div>

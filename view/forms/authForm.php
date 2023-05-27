@@ -10,17 +10,22 @@
   </head>
   <body>
     <main class="container border col-10 col-sm-6 col-md-8 col-lg-6 col-xl-4 p-3 center-block" style="background-color: #EEEEEE; margin-top: 10%;">
-      <form action="#" method="post" role="form" class="form-horizontal p-3 "  enctype="multipart/form-data" >
+      <form action="/controller/authController.php" method="post" role="form" class="form-horizontal p-3 "  enctype="multipart/form-data" >
           <h2 class="text-center mb-4">Admin Authorization</h2>
           <div class="form-group">
             <label for="login">Login</label>
-            <input type="text" class="form-control" id="login">
+            <input type="text" class="form-control" name="login" id="login">
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password">
+            <input type="password" class="form-control" name="password" id="password">
           </div>
-          <button type="button" class="btn btn-primary" name="addNewPerson" value="#" style="background: #7749F8; color: #ffffff">Sumbit</button>
+          <div class="row">
+            <button type="submit" class="btn btn-primary" style="background: #7749F8; color: #ffffff">Sumbit</button>
+            <div class="col-10 text-danger">
+              <?= @$messageWarning ?>
+            </div>
+          </div>
       </form>
     </main>
     <footer class="fixed-bottom" >
