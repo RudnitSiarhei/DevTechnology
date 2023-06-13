@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if($_SESSION)
+    {
+      header('location: /view/adminPanel.php');
+      exit();
+    }
+?> 
 <!doctype html>
 <html lang="eng">
   <head>
@@ -23,7 +31,7 @@
           <div class="row">
             <button type="submit" class="btn btn-primary" style="background: #7749F8; color: #ffffff">Sumbit</button>
             <div class="col-10 text-danger">
-              <?= @$messageWarning ?>
+              <?php @$messageWarning ?>
             </div>
           </div>
       </form>

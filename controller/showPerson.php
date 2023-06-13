@@ -1,7 +1,4 @@
-<?php
-    require_once "$pathDB";
-    require_once "$pathQuery";
-    $db = new Database();    
+<?php  
     $infoUsers = showAllPersons($db);
     foreach ($infoUsers as $infoUser)
     {
@@ -13,8 +10,6 @@
         $mail = $infoUser['LinkEmail'];
         $twitter = $infoUser['LinkTwitter'];
         $dribbble = $infoUser['LinkGit'];
-        require "$personTemplate";
+        require $personTemplate;
     }
-
-    
 ?>

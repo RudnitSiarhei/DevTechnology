@@ -12,6 +12,9 @@
             
             if ($this->login === $loginUser && $this->password === $passwordUser)
             {
+                session_start();
+                $_SESSION['login'] = $loginUser;
+                $_SESSION['password'] = $passwordUser;
                 header("Location: ../view/adminPanel.php");
             }
             else

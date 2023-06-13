@@ -41,3 +41,23 @@ function showAdminPassword($connection)
 {
     return $query = $connection->query("SELECT * FROM `adminPassword`");
 }
+
+function addImage($fileName, $connection)
+{
+    return $query = $connection->execute("INSERT INTO Image (Name) VALUES ('$fileName')");
+}
+
+function showAllImage($connection)
+{
+    return $query = $connection->query("SELECT * FROM `Image`");
+}
+
+function deleteImageOnFeaturedWorks($id, $connection)
+{
+    return $query = $connection->query("SELECT `Name` FROM `Image` WHERE id = $id");
+}
+
+function deleteInfoImg($id, $connection)
+{
+    return $query = $connection->query("DELETE FROM `Image` WHERE id = $id");
+}

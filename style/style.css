@@ -139,7 +139,7 @@
 
 .featured__works {
     background: white;
-    height: 1085px;
+    /* height: 1085px; */
 }
 
 .block-img {
@@ -147,8 +147,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 181px;
-    
+    margin-bottom: 10px;
 }
 
 .featured-works-img {
@@ -186,13 +185,14 @@
 
 .small__team {
     background-color: #F9FBFB;
-    min-height: 1240px;
+
+    /* min-height: 1240px; */
 }
 
 .small-team-img {
     max-height: 439px;
     margin: 7px;
-    transition: .3s;
+    transition: 0.3s;
     display: block; 
 }
 

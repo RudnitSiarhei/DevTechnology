@@ -1,3 +1,15 @@
+<?php
+    require '../model/connectOnBD.php';
+    $db = new Database();
+    require_once '../model/queries.php';
+    $infoAdmin = showAdminPassword($db);
+    session_start();
+    if($_SESSION == NULL || ($_SESSION['login'] != $infoAdmin[0]['name'] && $_SESSION['password'] != $infoAdmin[0]['password']))
+    {
+      header('location: forms/authForm.php');
+      exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,13 +31,10 @@
             <a class="nav-link" href="../index.php" style="color:white">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white">Link_1</a>
+            <a class="nav-link" href="imgPanel.php" style="color:white">Image Panel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white">Link_2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white">Link_3</a>
+            <a class="nav-link" href="../controller/logOut.php" style="color:white">Exit</a>
           </li>
         </ul>
       </nav>
@@ -37,8 +46,6 @@
       </div>
       <?php
         $personTemplate = 'template/personTemplate.php';
-        $pathDB = '../model/connectOnBD.php';
-        $pathQuery = '../model/queries.php';
         require_once '../controller/showPerson.php';
       ?>
     </main> 

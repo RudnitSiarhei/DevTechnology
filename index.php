@@ -12,6 +12,9 @@
         <link rel="stylesheet" href="css/cartonbox.css">
         <link rel="stylesheet" href="style/font-awesome.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        
     </head>
     <body class="body">
         <header class="header">
@@ -25,7 +28,7 @@
                     <span class="back-color-texthead">agency</span> corporate dt theme
                 </h1>
                 <div >
-                    <button class="header__button" name="button" onclick="document.location='View/forms/authForm.php'">Admin</button>
+                    <button class="header__button" name="button" onclick="document.location='view/adminPanel.php'">Admin</button>
                 </div>
                 <div class="header__img">
                     <img src="/img/header_glass.png" alt="header_glass">
@@ -63,37 +66,10 @@
             <div class="featured__works">
                 <h2 class="title__text">featured works</h2>
                 <h3 class="subtitle__text">lorem ipsum dolor sit amet event landing template</h3>
-                <div id="block-img" class="block-img">
-                    <div class="featured-works-img">
-                        <a href="/img/work_1.png" class="cartonbox" data-cb-type="img" data-cb-group="gallery">
-                            <img  src="/img/work_1.png" alt="work_1">
-                        </a>
-                    </div>
-                    <div class="featured-works-img">
-                        <a href="/img/work_2.png" class="cartonbox" data-cb-type="img" data-cb-group="gallery">
-                            <img src="/img/work_2.png" alt="work_2">
-                        </a>
-                    </div>
-                    <div class="featured-works-img">
-                        <a href="/img/work_3.png" class="cartonbox" data-cb-type="img" data-cb-group="gallery">
-                            <img src="/img/work_3.png" alt="work_3">
-                        </a>
-                    </div>
-                    <div class="featured-works-img">
-                        <a href="/img/work_4.png" class="cartonbox" data-cb-type="img" data-cb-group="gallery">
-                            <img src="/img/work_4.png" alt="work_4">
-                        </a>
-                    </div>
-                    <div class="featured-works-img">
-                        <a href="/img/work_5.png" class="cartonbox" data-cb-type="img" data-cb-group="gallery">
-                            <img src="/img/work_5.png" alt="work_5">
-                        </a>
-                    </div>
-                    <div class="featured-works-img">
-                        <a href="/img/work_6.png" class="cartonbox" data-cb-type="img" data-cb-group="gallery">
-                            <img src="/img/work_6.png" alt="work_6">
-                        </a>
-                    </div>
+                <div id="block-img" class="block-img photos">
+                    <?php    
+                        require_once('controller/showFeaturedWorks.php');
+                    ?>
                 </div>
             </div>
             <div class="small__team">
@@ -102,7 +78,7 @@
                 <div class="block-img">
                     <ul class="block-img-spisok">
                         <?php    
-                            require_once('view/team.php');
+                            require_once('controller/showInfoPerson.php');
                         ?>
                     </ul>
                 </div>
@@ -110,14 +86,22 @@
             <div class="content-block">
                 <div class="block-contact-map" id="block-contact">
                     <div class="contact-block">
-                        <form action="#" class="form-contact-block">
-                            <input class="input-form-cont" type="text" name="name" placeholder="Name*" maxlength="20" required> 
-                            <input class="input-form-cont" type="text" name="subject" placeholder="Subject*" maxlength="20" required>
-                            <input class="input-form-cont" type="text" name="email" placeholder="E-mail*" maxlength="35" required>
-                            <textarea class="input-form-cont textarea-mess" type="text" name="massege" placeholder="Massege*" required></textarea>
-                            <button class="btn-send-message" type="submit">send message</button>
-                        </form>
-                    </div>
+                    <form id="mailForm" class="contacts-section__form">
+                        <fieldset class="form-contact-block">
+                            <input class="input-form-cont" type="text" name="name" id="name"
+                                placeholder="Name*" autocomplete="on" required>
+                            <input class="input-form-cont" type="tel" name="phone"
+                                id="phone" placeholder="Phone: +375(xx)-xxx-xx-xx" autocomplete="on" required pattern="+375[0-9]{9}" minlength="13" maxlength="13">
+                            <input class="input-form-cont" type="email" name="email" id="email"
+                                placeholder="Email*" autocomplete="off" required>
+                            <textarea class="input-form-cont" name="message"
+                                id="message" placeholder="Message*" required minlength="10"></textarea>
+                            <button class="btn-send-message" type="submit" name="submit"
+                            id="submit">Send message</button>
+                        </fieldset> 
+                    </form>
+                    <div id="errorMess"></div>
+                </div>
                     <div class="block-map">
                         <ul class="spisok">
                             <li>Main office: Independence Avenue, 177 Minsk, Belarus</li>
@@ -128,7 +112,7 @@
                             <li>E-mail: siarhei.rudnitskiy@gmail.com</li>
                         </ul>
                         <div class="yandex-map">
-                            <iframe src="https://yandex.ru/maps/?um=constructor%3Ab3b4d78c754859cbe799c8954fc8c436c924cce78da5622fa9681430358a35ba&source=constructorLink" width="455" height="225" frameborder="0"></iframe>
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A57d525f57b82bdb83300bb8226bfb2769348d3db7d2d84a112310e6839b38743&amp;source=constructor" width="455" height="225" frameborder="0"></iframe>    
                         </div>
                     </div>
                 </div>
@@ -170,6 +154,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script src="js/cartonbox.js"></script>
 		<script src="js/app.js"></script>
+        <script src="js/formProgressing.js"></script>
     </body>
 </html>
-
